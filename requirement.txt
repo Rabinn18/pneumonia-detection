@@ -2,6 +2,7 @@ numpy
 pandas
 opencv-python
 matplotlib
+plotly
 tensorflow
 sns
 keras
