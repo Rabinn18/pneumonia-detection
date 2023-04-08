@@ -1,0 +1,10 @@
+numpy
+pandas
+opencv-python
+matplotlib
+tensorflow
+sns
+keras
+tqdm
+scipy
+scikit-image
