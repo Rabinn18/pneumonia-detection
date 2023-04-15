@@ -31,21 +31,11 @@ def predpneumoniaPrediction(image):
     model_pred = model.predict(image)
     probability = model_pred[0]
     if probability[0] < 0.5:
-        result = 'Pneumonia POSITIVE. Consult Radiologist as soon as possible.'
+        result = 'Pneumonia POSITIVE. Consult Radiologist/Doctor as soon as possible.'
     else:
-        result = 'Pneumonia NEGATIVE. You have a Healthy lung.'
-        
-   
+        result = 'Pneumonia NEGATIVE. You have a Healthy lung.'   
     # Return the predicted class and processed images
     return result
-# def predpneumoniaPrediction(image):
-#     # Preprocess the image
-#     image= preprocess_image(image)
-#     # Make a prediction using the model
-#     isPneumonic = model.predict(image)
-#     probability = isPneumonic
-#     imgClass = "Normal" if isPneumonic.any()<0.5 else "Pneumonic"
-#     return imgClass
 
 Pneumonia_interface = gr.Interface(predpneumoniaPrediction,
                      inputs=gr.inputs.Image(), 
